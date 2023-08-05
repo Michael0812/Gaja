@@ -110,6 +110,9 @@ h6,
 p {
   color: #EFEAEA;
 }
+h2 {
+  font-size: 3rem;
+}
 .nav-container {
   padding-left: 15px;
   padding-right: 15px;
@@ -155,10 +158,47 @@ header .navbar .navbar-collapse ul.navbar-nav-right li.nav-item a.nav-link:hover
 .header-section p {
   font-size: 2rem;
 }
+.header-section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/wp-content/themes/Gaja/images/header-cover.png');
+  opacity: 0.7;
+  z-index: 1;
+}
 .btn {
   background-color: #AB0706;
+  color: #EFEAEA;
 }
 .btn:hover {
   background-color: #EFEAEA;
   color: #AB0706;
+}
+section {
+  padding: 5rem 0;
+}
+.booking-form .form-field {
+  border: 1px solid #EFEAEA;
+  background-color: transparent;
+  color: #EFEAEA;
+}
+.booking-form label {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.about .about-wrapper {
+  position: relative;
+  background-color: #151515;
+}
+.about .about-wrapper .about-image-wrapper {
+  position: absolute;
+  top: 18%;
+  left: 60%;
+}
+.about .about-wrapper .about-image-wrapper img {
+  width: 50%;
+  position: absolute;
 }
