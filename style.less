@@ -1,0 +1,129 @@
+@import "css/variables";
+/* Theme Name: Gaja */
+/* Author: Polka. Graphic Design */
+/* Version: 1.0 */
+/* Description: Gaja Bournemouth*/
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap');
+@font-face {
+    font-family: 'Snell Roundhand';
+    src: url('/font/SnellRoundhand/SnellBT-Regular.otf') format('truetype');
+  }
+  
+  
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Snell Roundhand', cursive;
+    background-color: black;
+    letter-spacing: 2px;
+    line-height: 30px;
+    overflow-x: hidden;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        font-family: 'Snell Roundhand', cursive;
+    }
+    p,
+    .nav-link{
+        font-family: 'Rubik', sans-serif;
+    }
+}
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    color: @white;
+}
+
+// Navbar
+.nav-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 99999999;
+
+}
+nav.navbar {
+    z-index: 99999;
+    .navbar-collapse {
+        ul {
+            li {
+                margin: 0 1rem;
+                padding-top: 1rem;
+            };
+        }
+        ul.navbar-nav-left.nav {
+            padding-left: 12vw !important;
+        }
+        ul.navbar-nav-right.nav {
+            padding-right: 10vw;
+        }
+    }
+
+}
+header {
+    margin-bottom: -100px;
+    .navbar {
+      .navbar-collapse {
+        ul.navbar-nav-left,
+        ul.navbar-nav-right {
+          li.nav-item {
+            a.nav-link {
+              color: @white;
+              &:hover {
+                color: @purple !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+.container-fluid {
+    position: relative;
+}
+.header-section {
+    padding-top: 100px;
+    background-image: url("/wp-content/themes/Gaja/images/header-bg-image.webp");
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    h1{
+        font-size: 5rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+    // &:after{
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url('/wp-content/themes/Gaja/images/header-cover.png');
+    //     opacity: 0.7;
+    //     z-index: 1;
+    // }
+}
+
+//Buttons
+
+.btn {
+    background-color: @purple;
+    &:hover {
+        background-color: @white;
+        color: @purple;
+    }
+}
