@@ -199,6 +199,58 @@ section {
   left: 60%;
 }
 .about .about-wrapper .about-image-wrapper img {
-  width: 50%;
+  width: 60%;
   position: absolute;
+}
+.menu .nav-pills .nav-item {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align-last: center;
+}
+.menu .nav-pills .nav-item .nav-link img {
+  height: 80px;
+}
+.nav-pills .nav-link.active,
+.nav-pills .nav-pills .show > .nav-link {
+  background-color: transparent !important;
+}
+.nav-link.active::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 38px;
+  left: 16px;
+}
+.nav-link.nav-link-1.active::before {
+  background-image: url('/wp-content/themes/Gaja/images/icons/active-main-meal.png');
+  left: 22px !important;
+}
+.nav-link.nav-link-2.active::before {
+  background-image: url('/wp-content/themes/Gaja/images/icons/active-starters-icon.png');
+}
+.nav-link.nav-link-3.active::before {
+  background-image: url('/wp-content/themes/Gaja/images/icons/active-desserts-icon.png');
+}
+.nav-link.nav-link-4.active::before {
+  background-image: url('/wp-content/themes/Gaja/images/icons/active-cocktails-icon.png');
+}
+.nav-link.nav-link-5.active::before {
+  background-image: url('/wp-content/themes/Gaja/images/icons/active-drinks-icon.png');
+}
+.nav-link.active {
+  position: relative;
+}
+.nav-link.active > .main-meal ~ p {
+  position: relative;
+  margin-top: 90px;
+  text-align: center;
+  z-index: 1;
+}
+a#pills-main-courses-tab {
+  height: 126px;
 }
