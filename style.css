@@ -97,7 +97,10 @@ body h6 {
   font-family: 'Snell Roundhand', cursive;
 }
 body p,
-body .nav-link {
+body .btn,
+body .nav-link,
+body .menu-item-title h6,
+body .menu-item-price {
   font-family: 'Rubik', sans-serif;
 }
 a,
@@ -107,7 +110,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+.menu-item-title,
+.menu-item-price {
   color: #EFEAEA;
 }
 h2 {
@@ -172,6 +177,8 @@ header .navbar .navbar-collapse ul.navbar-nav-right li.nav-item a.nav-link:hover
 .btn {
   background-color: #AB0706;
   color: #EFEAEA;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 .btn:hover {
   background-color: #EFEAEA;
@@ -253,4 +260,42 @@ section {
 }
 a#pills-main-courses-tab {
   height: 126px;
+}
+.menu-item-wrapper {
+  padding: 0.5rem 0rem;
+}
+.menu-item-wrapper .menu-item-description {
+  color: #AB0706;
+  font-size: 0.7rem;
+  margin-top: -10px;
+}
+.menu-item-wrapper .menu-item {
+  display: flex;
+}
+.menu-item-wrapper .menu-item .menu-item-title {
+  width: 100%;
+}
+.menu-item-wrapper .menu-item .menu-item-title h6 {
+  margin-top: 4px;
+}
+.menu-item-wrapper .menu-item .menu-item-dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.menu-item-wrapper .menu-item .menu-item-dots::after,
+.menu-item-wrapper .menu-item .menu-item-dots::before {
+  content: "";
+  border-bottom: 0.5px solid #EFEAEA;
+  height: 5px;
+  width: 30%;
+}
+.tab-content {
+  background-image: url("/wp-content/themes/Gaja/images/pattern-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  position: relative;
 }

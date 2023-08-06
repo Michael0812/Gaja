@@ -31,7 +31,10 @@ body {
         font-family: 'Snell Roundhand', cursive;
     }
     p,
-    .nav-link{
+    .btn,
+    .nav-link,
+    .menu-item-title h6,
+    .menu-item-price{
         font-family: 'Rubik', sans-serif;
     }
 }
@@ -42,7 +45,9 @@ h3,
 h4,
 h5,
 h6,
-p{
+p,
+.menu-item-title,
+.menu-item-price{
     color: @white;
 }
 
@@ -126,6 +131,8 @@ header {
 .btn {
     background-color: @purple;
     color: @white;
+    padding-right: 2rem;
+    padding-left: 2rem;
     &:hover {
         background-color: @white;
         color: @purple;
@@ -228,4 +235,43 @@ section{
 }
 a#pills-main-courses-tab {
     height: 126px;
+}
+.menu-item-wrapper {
+    padding: 0.5rem 0rem;
+    .menu-item-description {
+        color: @purple;
+        font-size: 0.7rem;
+        margin-top: -10px;
+    }
+    .menu-item {
+        display: flex;
+
+        .menu-item-title {
+            width: 100%;
+            h6 {
+                margin-top: 4px;
+            }
+        }
+        .menu-item-dots {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .menu-item-dots::after,
+        .menu-item-dots::before {
+            content: "";
+            border-bottom: 0.5px solid @white;
+            height: 5px;
+            width: 30%;
+        }
+    }
+}
+.tab-content{
+    background-image: url("/wp-content/themes/Gaja/images/pattern-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    position: relative;
 }
