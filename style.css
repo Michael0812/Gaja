@@ -117,6 +117,7 @@ p,
 }
 h2 {
   font-size: 3rem;
+  padding-bottom: 3rem;
 }
 .nav-container {
   padding-left: 15px;
@@ -175,14 +176,28 @@ header .navbar .navbar-collapse ul.navbar-nav-right li.nav-item a.nav-link:hover
   z-index: 1;
 }
 .btn {
-  background-color: #AB0706;
-  color: #EFEAEA;
   padding-right: 2rem;
   padding-left: 2rem;
+  border-radius: 0;
+  position: relative;
 }
-.btn:hover {
+.btn.btn-purple {
+  background-color: #AB0706;
+  color: #EFEAEA;
+}
+.btn.btn-purple:hover {
   background-color: #EFEAEA;
   color: #AB0706;
+}
+.btn.btn-black {
+  background-color: #030110;
+  color: #EFEAEA;
+  border: 1px solid #030110;
+}
+.btn.btn-black:hover {
+  background-color: #EFEAEA;
+  color: #030110;
+  border: 1px solid #030110;
 }
 section {
   padding: 5rem 0;
@@ -202,11 +217,11 @@ section {
 }
 .about .about-wrapper .about-image-wrapper {
   position: absolute;
-  top: 18%;
+  top: 22%;
   left: 60%;
 }
 .about .about-wrapper .about-image-wrapper img {
-  width: 60%;
+  width: 50%;
   position: absolute;
 }
 .menu .nav-pills .nav-item {
@@ -230,7 +245,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 38px;
+  top: 8px;
   left: 16px;
 }
 .nav-link.nav-link-1.active::before {
@@ -257,9 +272,6 @@ section {
   margin-top: 90px;
   text-align: center;
   z-index: 1;
-}
-a#pills-main-courses-tab {
-  height: 126px;
 }
 .menu-item-wrapper {
   padding: 0.5rem 0rem;
@@ -299,6 +311,53 @@ a#pills-main-courses-tab {
   width: 100%;
   position: relative;
 }
+.testimonial-slider {
+  padding: 2em 2em 3em;
+}
+.testimonial-title h2 {
+  padding-left: 0.2em;
+}
+.card {
+  margin: 0 0.5em;
+  border: none;
+  height: 100%;
+  background-color: transparent;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #fff;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  top: 60%;
+  transform: translateY(-50%);
+}
+@media (min-width: 576px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 50%;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .carousel-inner {
+    padding: 1em;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 1;
+    position: absolute;
+    left: 1em;
+    top: 90%;
+    transform: translateY(-50%);
+  }
+  .carousel-control-next {
+    left: 5em;
+  }
+}
 .grid-wrapper > div {
   display: flex;
   justify-content: center;
@@ -312,7 +371,6 @@ a#pills-main-courses-tab {
   object-fit: cover;
   border: 1px solid black;
 }
-/* Grid */
 .grid-wrapper {
   display: grid;
   grid-gap: 10px;
@@ -327,9 +385,167 @@ a#pills-main-courses-tab {
   grid-column: span 2;
   grid-row: span 2;
 }
+.testimonials .carousel-inner .carousel-item .testimonials-description {
+  font-style: italic;
+}
+.testimonials .carousel-inner .carousel-item .quote {
+  position: relative;
+  font-size: 10rem;
+  top: 60px;
+  color: #EFEAEA;
+  left: -30px;
+}
+.testimonial {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3d5a80;
+}
+.testimonial .testimonial-slide {
+  padding: 40px 20px;
+}
+.testimonial .testimonial_box .testimonial-top {
+  background-color: #e0fbfc;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 5px 5px 20px rgba(152, 193, 217, 0.493);
+}
+.testimonial .testimonial-text {
+  padding: 10px 0;
+}
+.testimonial .testimonial-text p {
+  color: #293241;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.testimonial .testimonial-name {
+  padding-top: 10px;
+}
+.testimonial .testimonial-name h4 {
+  font-size: 20px;
+  line-height: 25px;
+  color: #293241;
+  margin-bottom: 0;
+}
+.testimonial .testimonial-job p {
+  color: #293241;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 20px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.section.contact-us {
+  background: url("/wp-content/themes/Gaja/images/contact-us-bg-image.webp") center / cover no-repeat;
+  width: 100%;
+  height: 680px;
+}
+.section.contact-us .form-wrapper {
+  background-color: #EFEAEA;
+}
+.section.contact-us .form-wrapper .title-wrapper h2 {
+  color: #030110;
+}
+.section.contact-us .form-wrapper .form-group input,
+.section.contact-us .form-wrapper .form-group textarea {
+  background-color: #EFEAEA;
+  border: none;
+  border-bottom: 1px solid #030110;
+  border-radius: 0;
+}
+textarea {
+  height: 70px !important;
+  resize: none !important;
+}
+textarea::placeholder {
+  color: #151515 !important;
+  opacity: 0.7 !important;
+}
+.footer .menu {
+  background-color: #EFEAEA;
+}
+.footer .menu .opening-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.footer .menu .opening-hours-table p {
+  color: #030110;
+  margin: 0px;
+}
+.footer .menu .opening-hours-table th,
+.footer .menu .opening-hours-table td {
+  padding: 8px;
+  border-bottom: 1px solid black;
+}
+.footer .menu .opening-hours-table th {
+  text-align: left;
+}
+.footer .menu .opening-hours-table td {
+  text-align: right;
+}
+.footer .menu .opening-hours-table tr:last-child th,
+.footer .menu .opening-hours-table tr:last-child td {
+  border-bottom: none;
+}
+.footer .quick-links ul li a:hover {
+  color: #AB0706;
+}
+.footer .social-media-icon ul li .bi:hover {
+  color: #AB0706;
+}
+.footer ul {
+  padding: 0px;
+}
+.footer ul li {
+  list-style: none;
+  color: #EFEAEA;
+  line-height: 18px;
+}
+.footer ul li a {
+  text-decoration: none;
+}
+.footer ul li a:hover {
+  color: #AB0706;
+}
+.footer .social-media-icon {
+  column-gap: 15px;
+}
 /* Media Queries */
 @media screen and (min-width: 1024px) {
   .gallery-wrapper {
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  button.carousel-control-prev {
+    margin-left: 70%;
+  }
+  .grid-wrapper {
+    grid-auto-flow: dense;
+  }
+  .grid-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section {
+    padding: 2rem 0;
+  }
+  .about .about-wrapper .about-image-wrapper {
+    top: 75%;
+    left: 43%;
+  }
+  .about .about-wrapper .about-image-wrapper img {
+    width: 50%;
+    position: absolute;
   }
 }
