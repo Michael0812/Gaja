@@ -42,7 +42,7 @@
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn" href="#">Book a Table</a>
+                        <a class="nav-link btn btn-purple" href="#">Book a Table</a>
                     </li>
                 </ul>
             </div>
