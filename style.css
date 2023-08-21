@@ -100,7 +100,9 @@ body p,
 body .btn,
 body .nav-link,
 body .menu-item-title h6,
-body .menu-item-price {
+body .menu-item-price,
+body .rtb-form-submit button,
+body label {
   font-family: 'Rubik', sans-serif;
 }
 a,
@@ -132,7 +134,7 @@ nav.navbar .navbar-collapse ul li {
   padding-top: 1rem;
 }
 nav.navbar .navbar-collapse ul.navbar-nav-left.nav {
-  padding-left: 12vw !important;
+  padding-left: 12vw;
 }
 nav.navbar .navbar-collapse ul.navbar-nav-right.nav {
   padding-right: 10vw;
@@ -175,19 +177,24 @@ header .navbar .navbar-collapse ul.navbar-nav-right li.nav-item a.nav-link:hover
   opacity: 0.7;
   z-index: 1;
 }
-.btn {
+.btn,
+.rtb-form-submit button {
   padding-right: 2rem;
   padding-left: 2rem;
   border-radius: 0;
   position: relative;
 }
-.btn.btn-purple {
+.btn.btn-purple,
+.rtb-form-submit button {
   background-color: #AB0706;
   color: #EFEAEA;
+  border: 1px solid #AB0706;
 }
-.btn.btn-purple:hover {
-  background-color: #EFEAEA;
-  color: #AB0706;
+.btn.btn-purple:hover,
+.rtb-form-submit button:hover {
+  background-color: transparent;
+  color: #EFEAEA !important;
+  border: 1px solid #EFEAEA;
 }
 .btn.btn-black {
   background-color: #030110;
@@ -201,6 +208,7 @@ header .navbar .navbar-collapse ul.navbar-nav-right li.nav-item a.nav-link:hover
 }
 section {
   padding: 5rem 0;
+  background-color: #030110;
 }
 .booking-form .form-field {
   border: 1px solid #EFEAEA;
@@ -246,7 +254,6 @@ section {
   background-repeat: no-repeat;
   position: absolute;
   top: 8px;
-  left: 16px;
 }
 .nav-link.nav-link-1.active::before {
   background-image: url('/wp-content/themes/Gaja/images/icons/active-main-meal.png');
@@ -470,6 +477,15 @@ textarea::placeholder {
   color: #151515 !important;
   opacity: 0.7 !important;
 }
+.footer {
+  position: relative;
+}
+.footer .img-pattern-wrapper-left img.img-pattern {
+  position: absolute;
+  height: 44%;
+  right: 2%;
+  top: 16%;
+}
 .footer .menu {
   background-color: #EFEAEA;
 }
@@ -519,15 +535,156 @@ textarea::placeholder {
 .footer .social-media-icon {
   column-gap: 15px;
 }
+.booking {
+  position: relative;
+}
+.booking .img-pattern-wrapper-left img.img-pattern {
+  display: none;
+}
+.booking .img-pattern-wrapper-right img.img-pattern {
+  display: none;
+}
+.booking .rtb-booking-form-form label {
+  color: #EFEAEA;
+}
+.booking .rtb-booking-form-form fieldset.reservation,
+.booking .rtb-booking-form-form fieldset.rtb-contact {
+  margin: 0px;
+  padding: 0px;
+}
+.booking .rtb-booking-form-form fieldset.reservation legend,
+.booking .rtb-booking-form-form fieldset.rtb-contact legend {
+  display: none !important;
+}
+.booking .rtb-booking-form-form fieldset.reservation input,
+.booking .rtb-booking-form-form fieldset.rtb-contact input {
+  min-width: 100%;
+}
+.booking .rtb-booking-form-form fieldset.reservation .rtb-select.party select#rtb-party {
+  min-width: 100%;
+  height: 35px;
+}
+.booking .rtb-booking-form-form fieldset.rtb-contact .add-message {
+  display: none;
+}
+.testimonials {
+  position: relative;
+}
+.testimonials .img-pattern-wrapper-right img.img-pattern {
+  position: absolute;
+  top: 30%;
+  height: 72%;
+  right: -6%;
+}
 /* Media Queries */
+@media screen and (min-width: 992px) {
+  .footer {
+    position: relative;
+  }
+  .footer .img-pattern-wrapper-left img.img-pattern {
+    position: absolute;
+    height: 100%;
+    left: 0;
+  }
+  .testimonials {
+    position: relative;
+  }
+  .testimonials .img-pattern-wrapper-right img.img-pattern {
+    position: absolute;
+    top: 30%;
+    right: 0%;
+  }
+  .booking .img-pattern-wrapper-left img.img-pattern {
+    position: absolute;
+    display: block;
+    height: 80% !important;
+    top: 40%;
+  }
+  .booking .img-pattern-wrapper-right img.img-pattern {
+    position: absolute;
+    top: 56%;
+    right: -10%;
+    height: 80% !important;
+    display: block;
+  }
+  .booking .rtb-booking-form-form .rtb-error {
+    margin-top: -2.3rem !important;
+  }
+  .booking .rtb-booking-form-form select#rtb-party {
+    min-width: 300px !important;
+    margin: 0 0.5rem;
+  }
+  .booking .rtb-booking-form-form label {
+    color: #EFEAEA;
+    margin: 0.5rem 1rem;
+  }
+  .booking .rtb-booking-form-form fieldset.reservation,
+  .booking .rtb-booking-form-form fieldset.rtb-contact {
+    justify-content: center;
+    display: flex !important;
+  }
+  .booking .rtb-booking-form-form fieldset.reservation input,
+  .booking .rtb-booking-form-form fieldset.rtb-contact input {
+    min-width: 300px;
+    margin: 0 0.5rem;
+  }
+  .booking .rtb-booking-form-form fieldset.rtb-form-footer .rtb-form-submit {
+    text-align-last: center;
+    text-align: -webkit-center;
+  }
+}
 @media screen and (min-width: 1024px) {
   .gallery-wrapper {
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 768px) {
+  .nav-link.nav-link-1.active::before {
+    left: 42px !important;
+  }
+  .nav-link.nav-link-2.active::before {
+    left: 18px;
+  }
+  .nav-link.nav-link-3.active::before {
+    left: 21px;
+  }
+  .nav-link.nav-link-4.active::before {
+    left: 23px;
+  }
+  .social-media-icon {
+    justify-content: center;
+  }
+  .section.contact-us {
+    height: 100%;
+    padding: 2rem;
+  }
+  .testimonial-slider {
+    padding: 1rem 0rem 2rem 0rem;
+  }
+  .menu-item-wrapper {
+    padding: 0px;
+  }
+  h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  .nav-link.active::before {
+    width: 40px;
+    height: 40px;
+  }
+  .menu .nav-pills .nav-item {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align-last: center;
+  }
+  .menu .nav-pills .nav-item .nav-link img {
+    height: 40px;
+  }
   button.carousel-control-prev {
-    margin-left: 70%;
+    margin-left: 65%;
+  }
+  button.carousel-control-next {
+    right: 7%;
   }
   .grid-wrapper {
     grid-auto-flow: dense;
@@ -540,6 +697,9 @@ textarea::placeholder {
   section {
     padding: 2rem 0;
   }
+  .about .about-wrapper {
+    background-color: #030110;
+  }
   .about .about-wrapper .about-image-wrapper {
     top: 75%;
     left: 43%;
@@ -547,5 +707,34 @@ textarea::placeholder {
   .about .about-wrapper .about-image-wrapper img {
     width: 50%;
     position: absolute;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar {
+    background-color: #030110;
+  }
+  .navbar .navbar-collapse {
+    background-color: #030110;
+    padding: 2rem 0rem;
+  }
+  .navbar .navbar-collapse ul.navbar-nav-left.nav,
+  .navbar .navbar-collapse ul.navbar-nav-right.nav {
+    padding-left: 0px !important;
+    display: block;
+  }
+  .navbar .navbar-collapse a.nav-link.nav-btn.btn.btn-purple {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .booking .img-pattern-wrapper-left img.img-pattern {
+    height: 80% !important;
+    top: 40%;
+    left: 5%;
+  }
+  .booking .img-pattern-wrapper-right img.img-pattern {
+    position: absolute;
+    top: 56%;
+    right: 5%;
   }
 }

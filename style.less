@@ -34,7 +34,9 @@ body {
     .btn,
     .nav-link,
     .menu-item-title h6,
-    .menu-item-price{
+    .menu-item-price,
+    .rtb-form-submit button,
+    label{
         font-family: 'Rubik', sans-serif;
     }
 }
@@ -72,7 +74,7 @@ nav.navbar {
             };
         }
         ul.navbar-nav-left.nav {
-            padding-left: 12vw !important;
+            padding-left: 12vw;
         }
         ul.navbar-nav-right.nav {
             padding-right: 10vw;
@@ -129,18 +131,22 @@ header {
 
 //Buttons
 
-.btn {
+.btn,
+.rtb-form-submit button {
     padding-right: 2rem;
     padding-left: 2rem;
     border-radius: 0;
     position: relative;
 }
-.btn.btn-purple {
+.btn.btn-purple,
+.rtb-form-submit button {
     background-color: @purple;
     color: @white;
+    border: 1px solid @purple;
     &:hover {
-        background-color: @white;
-        color: @purple;
+        background-color: transparent;
+        color: @white !important;
+        border: 1px solid @white;
     }
 }
 .btn.btn-black {
@@ -158,6 +164,7 @@ header {
 // Section
 section{
     padding: 5rem 0;
+    background-color: @black;
 }
 
 // Contact Forms
@@ -222,7 +229,7 @@ section{
     background-repeat: no-repeat;
     position: absolute;
     top: 8px;
-    left: 16px;
+    // left: 16px;
 }
 .nav-link.nav-link-1.active::before{
     background-image: url('/wp-content/themes/Gaja/images/icons/active-main-meal.png');
@@ -488,6 +495,15 @@ textarea {
 
 // Footer
 .footer{
+    position: relative;
+    .img-pattern-wrapper-left{
+        img.img-pattern{
+            position: absolute;
+            height: 44%;
+            right: 2%;
+            top: 16%;
+        }
+    }
     .menu{
         background-color: @white;
         .opening-hours-table {
@@ -558,7 +574,135 @@ textarea {
         column-gap: 15px;
     }
 }
+
+// Form
+.booking{
+    position: relative;
+        .img-pattern-wrapper-left{
+            img.img-pattern{
+                display: none;
+            }
+        }
+        .img-pattern-wrapper-right{
+            img.img-pattern{
+                display: none;
+            }
+        }
+    .rtb-booking-form-form{
+        label{
+            color: @white;
+        }
+        fieldset.reservation,
+        fieldset.rtb-contact{
+            margin: 0px;
+            padding: 0px;
+            legend{
+                display: none !important;
+            }
+            input{
+                min-width: 100%;
+            }
+        }
+        fieldset.reservation{
+            .rtb-select.party{
+                select#rtb-party {
+                    min-width: 100%;
+                    height: 35px;
+                }
+            }
+        }
+        fieldset.rtb-contact{
+            .add-message{
+                display: none;
+            }
+        }
+       
+    }
+}
+
+.testimonials{
+    position: relative;
+    .img-pattern-wrapper-right{
+        img.img-pattern{
+            position: absolute;
+            top: 30%;
+            height: 72%;
+            right: -6%;
+        }
+    }
+}
 /* Media Queries */
+@media screen and (min-width: 992px) {
+    .footer{
+        position: relative;
+        .img-pattern-wrapper-left{
+            img.img-pattern{
+                position: absolute;
+                height: 100%;
+                left: 0;
+            }
+        }
+    }
+    .testimonials{
+        position: relative;
+        .img-pattern-wrapper-right{
+            img.img-pattern{
+                position: absolute;
+                top: 30%;
+                right: 0%;
+            }
+        }
+    }
+    .booking {
+        .img-pattern-wrapper-left{
+            img.img-pattern{
+                position: absolute;
+                display: block;
+                height: 80% !important;
+                top: 40%;   
+            }
+        }
+        .img-pattern-wrapper-right{
+            img.img-pattern{
+                position: absolute;
+                top: 56%;
+                right: -10%;
+                height: 80% !important;
+                display: block;
+            }
+        }
+        .rtb-booking-form-form {
+            .rtb-error {
+                margin-top: -2.3rem !important;
+            }
+            select#rtb-party {
+                min-width: 300px !important;
+                margin: 0 0.5rem;
+            }
+            label {
+                color: @white;
+                margin: 0.5rem 1rem;
+
+            }
+            fieldset.reservation,
+            fieldset.rtb-contact {
+                justify-content: center;
+                display: flex !important;
+                input {
+                    min-width: 300px;
+                    margin: 0 0.5rem;
+                }
+            }
+            fieldset.rtb-form-footer {
+                .rtb-form-submit {
+                    text-align-last: center;
+                    text-align: -webkit-center;
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (min-width: 1024px){
 	.gallery-wrapper{
@@ -567,8 +711,62 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
+
+    .nav-link.nav-link-1.active::before{
+        left: 42px !important;
+    }
+    .nav-link.nav-link-2.active::before{
+        left: 18px;
+    }
+    .nav-link.nav-link-3.active::before{
+        left: 21px;
+    }
+    .nav-link.nav-link-4.active::before{
+        left: 23px;
+    }
+    .nav-link.nav-link-5.active::before{
+        
+    }
+    .social-media-icon{
+        justify-content: center;
+    }
+    .section.contact-us{
+        height: 100%;
+        padding: 2rem;
+    }
+    .testimonial-slider {
+        padding: 1rem 0rem 2rem 0rem;
+      }
+    .menu-item-wrapper {
+        padding: 0px
+    }
+    h2{
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+    .nav-link.active::before {
+        width: 40px;
+        height: 40px;
+    }
+    .menu {
+        .nav-pills {
+            .nav-item {
+                margin-left: 20px;
+                margin-right: 20px;
+                text-align-last: center;
+                .nav-link {
+                    img {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
     button.carousel-control-prev {
-        margin-left: 70%;
+        margin-left: 65%;
+    }
+    button.carousel-control-next{
+        right: 7%;
     }
     .grid-wrapper {
         grid-auto-flow: dense;
@@ -583,6 +781,7 @@ textarea {
     }
     .about {
         .about-wrapper {
+            background-color: @black;
             .about-image-wrapper {
                 top: 75%;
                 left: 43%;
@@ -590,6 +789,43 @@ textarea {
                     width: 50%;
                     position: absolute;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar{
+        background-color: @black;
+        .navbar-collapse{
+            background-color: @black;
+            padding: 2rem 0rem;
+            ul.navbar-nav-left.nav,
+            ul.navbar-nav-right.nav{
+                padding-left: 0px !important;
+                display: block;
+            }
+            a.nav-link.nav-btn.btn.btn-purple  {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .booking {
+        .img-pattern-wrapper-left{
+            img.img-pattern{
+                height: 80% !important;
+                top: 40%;
+                left: 5%;  
+            }
+        }
+        .img-pattern-wrapper-right{
+            img.img-pattern{
+                position: absolute;
+                top: 56%;
+                right: 5%;
             }
         }
     }
