@@ -1,8 +1,11 @@
 <?php wp_footer();?>
 
 <footer class="text-center text-lg-start footer">
+<div class="img-pattern-wrapper-left">
+	<img src="/wp-content/themes/Gaja/images/pattern2.png" alt="pattern" class="img-pattern">
+</div>
         <div class="container text-center text-md-start mt-5">
-            <div class="row mt-3">
+            <div class="row mt-3 px-4">
                 <div class="col-12 col-md-4">
                     <h4 class="fw-bold mb-4 mt-2 mt-md-5">Address</h4>
                     <ul>
@@ -62,7 +65,7 @@
                     </ul>
                     <p></p>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 pb-4 pb-md-0 py-4 py-md-0">
                 <h4 class="fw-bold quick-links mb-4 mt-2 mt-md-5">Quick Links</h4>
                 <ul>
                     <li> <p>
@@ -85,7 +88,7 @@
                     </p></li>
                 </ul>
                 </div>
-                <div class="col-md-4 col-lg-4 mx-auto mb-4 menu p-4 text-center">
+                <div class="col-md-4 col-lg-4 mx-auto mb-4 menu p-3 p-md-4 text-center">
                     <h4 class="fw-bold text-dark quick-links mb-4 mt-2">Opening Hours</h4>
                     <table class="opening-hours-table">
                         <tr><th><p>Monday</p></th><td><p>9am - 5pm</p></td></tr>
@@ -106,6 +109,7 @@
     </div>
 
 </footer>
+<script src="/js/main.js"></script>
 
 <script
     src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
@@ -121,5 +125,7 @@
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+
+</script>
 </body>
 </html>
